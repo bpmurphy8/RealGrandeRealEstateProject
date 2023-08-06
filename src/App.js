@@ -1,7 +1,7 @@
 import './App.css';
 import Header from './components/Header';
 import { useEffect, useState } from 'react';
-import House1 from './components/House1';
+import House1 from './components/House';
 import SearchFilter from './components/SearchFilter';
 import {Routes , Route} from 'react-router-dom';
 import SearchResults from './components/SearchResults';
@@ -34,7 +34,7 @@ function App() {
           <Route path ="/" element={<House1 houses={allHouses}/>} />
           <Route path="searchresults/:county" element={<SearchResults houses={allHouses}/>} />
           <Route path="searchedhouse/:id" element={<SearchedHouse houses={allHouses}/>} />
-          <Route path="/login" element={<Login />} />
+          <Route path="login" element={<Login />} />
         </Routes>
 
     </div>
