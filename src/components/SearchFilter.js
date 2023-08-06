@@ -30,9 +30,14 @@ const SearchFilter = ({houses}) => {
                 <div className="col-sm-12">
                     Search By County: 
                         <select onChange={changeHandler}>
-                            {
-                                counties.map((elem)=> <option key={elem} value={elem}> {elem} </option>)
-                            }
+                        {
+                            counties.map((elem,index)=> {
+                                console.log(index,elem);
+                                return (
+                                    <option key={index} value={elem}> {elem} </option>
+                                )
+                            })
+                        }
                         </select>   
                 </div>
             </div>
